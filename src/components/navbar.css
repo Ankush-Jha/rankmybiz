@@ -1,0 +1,7 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  background-color: #34D399;
+  font-family: 'Space Grotesk', sans-serif;
+  filter: drop-shadow(8px 8px 0px rgb(0, 0, 0));
+}
