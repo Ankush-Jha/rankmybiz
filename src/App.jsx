@@ -1,24 +1,38 @@
 import { useState } from 'react'
+import { GoogleGenAI } from '@google/genai';
 import Navbar from './components/navbar'
 import Rating from './components/Rating'
 import ReviewCard from './components/review'
 import SubmitSuccess from './components/submit'
-
 import './App.css'
 import SubmitBtn from './components/submit-btn'
 
+const ai = new GoogleGenAI({ apiKey: "" });
+
 function App() {
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [review, setReview] = useState("");
+
+  const handleRating = async (stars) => {
+    setReview("Generating...");
+    try {
+      const res = await ai.models.generateContent({
+          model: 'gemini-flash-lite-latest',
+          contents: `Write a short 1-sentence review for a ${stars} star experience, it should be SEO firendly content`,
+      });
+      setReview(res.text);
+    } catch (error) {
+      setReview("AI is experiencing high demand. Please click the star again!");
+    }
+  };
 
   return (
     <div className="App">
       <Navbar />
-      {isSubmitted ? (
-        <SubmitSuccess />
-      ) : (
+      {isSubmitted ? <SubmitSuccess /> : (
         <>
-          <Rating />
-          <ReviewCard />
+          <Rating onRate={handleRating} />
+          <ReviewCard reviewText={review} />
           <SubmitBtn onClick={() => setIsSubmitted(true)} />
         </>
       )}

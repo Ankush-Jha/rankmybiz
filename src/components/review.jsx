@@ -1,14 +1,15 @@
 import React from "react";
 import "./review.css"
 
-const ReviewCard = () => {
+const ReviewCard = ({ reviewText }) => {
     return(
         <div className="container">
-            <h3 className="title">PICK A REVIEW</h3>
+            <h3 className="title">AI MAGIC: CHOOSE YOUR REVIEW</h3>
             <div className="card">
-                <span className="tag">Fast Service</span>
-                <p className="review">"The staff was efficient and friendly. Highly recommended for a quick stop."</p>
-                <button className="select-btn">SELECTED</button>
+                <span className="tag">AI Generated</span>
+                <p className="review">
+                    {reviewText || "Click a star rating above to generate an AI review!"}
+                </p>
             </div>
         </div>
     )
