@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <div className='nav'>
 
-      <h1>Step 2 out of 3</h1>
+      <h1>Step 1 out of 2</h1>
     </div>
   )
 }
