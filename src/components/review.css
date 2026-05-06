@@ -1,0 +1,38 @@
+.container {
+  padding: 4px;
+  font-family: Arial, sans-serif;
+}
+.title {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+.card {
+  position: relative;
+  background: #eaeaea;
+  padding: 30px 20px;
+  border: 3px solid #4a90e2;
+  box-shadow: 6px 6px 0px black;
+}
+.tag {
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  background: #f4d03f;
+  padding: 5px 10px;
+  font-weight: bold;
+  border: 2px solid black;
+}
+.review {
+  font-style: italic;
+  margin-bottom: 20px;
+  color: #333;
+}
+.select-btn {
+  width: 100%;
+  padding: 12px;
+  background: #2ecc71;
+  border: 2px solid black;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px black;
+}
