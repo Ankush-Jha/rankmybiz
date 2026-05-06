@@ -8,7 +8,7 @@ import './App.css'
 import SubmitBtn from './components/submit-btn'
 
 const ai = new GoogleGenAI({ apiKey: "" });
-
+  
 function App() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [review, setReview] = useState("");
@@ -22,13 +22,13 @@ function App() {
       });
       setReview(res.text);
     } catch (error) {
-      setReview("sorry yaar. API crash hogya");
+      setReview("AI is experiencing high demand. Please click the star again!");
     }
   };
 
   return (
     <div className="App">
-      <Navbar />
+      <Navbar step = {isSubmitted ? 2 : 1}/>
       {isSubmitted ? <SubmitSuccess /> : (
         <>
           <Rating onRate={handleRating} />
