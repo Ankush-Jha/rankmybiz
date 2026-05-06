@@ -22,7 +22,7 @@ function App() {
       });
       setReview(res.text);
     } catch (error) {
-      setReview("AI is experiencing high demand. Please click the star again!");
+      setReview("sorry yaar. API crash hogya");
     }
   };
 
