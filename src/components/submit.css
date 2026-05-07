@@ -6,16 +6,16 @@
   text-align: center;
   padding: 40px 20px;
   background-color: white;
-  border: 3px solid black;
-  box-shadow: 8px 8px 0px black;
+  box-shadow: 5px 5px 0px black;
   width: 80%;
   max-width: 400px;
   margin: 50px auto;
+  background-color: #fbd500a4;
+  border: 3px solid black;
 }
 
 .success-icon {
-  background-color: #00e676;
-  border: 4px solid black;
+  background-color: #00cb69;
   border-radius: 50%;
   width: 80px;
   height: 80px;
@@ -27,19 +27,20 @@
   color: black;
   box-shadow: 4px 4px 0px black;
   margin-bottom: 20px;
+  border: 3px solid black;
 }
 
 .submit-success h1 {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 32px;
   font-weight: 700;
-  margin-bottom: 10px;
   color: black;
+  margin-bottom: 10px;
 }
 
 .submit-success p {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 18px;
-  font-weight: 500;
-  color: #3b4a3d;
+  color: #333;
+  line-height: 1.4;
 }
